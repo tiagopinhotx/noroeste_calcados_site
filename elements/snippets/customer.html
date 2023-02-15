@@ -1,0 +1,28 @@
+<div class="customer customer-1">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6 login" data-tray-tst="saudacao">
+                <span class="tray-hide" data-logged-user="true">
+                    {{ Translation('ag_bem-vindo') ? Translation('ag_bem-vindo') : 'Bem-vindo' }}  
+                    <span data-customer="name"></span>,
+                    <a href="{{ links.logout }}"> {{ Translation('ag_sair') ? Translation('ag_sair') : 'clique aqui para sair' }}</a></li>
+                </span>
+                <span class="tray-hide" data-logged-user="false">
+                    {{ Translation('ag_bem-vindo') ? Translation('ag_bem-vindo') : 'Bem-vindo' }}  , {{ Translation('ag_faca-seu') ? Translation('ag_faca-seu') : 'fa&ccedil;a seu' }} 
+                    <a href="{{ links.login }}" data-tray-tst="login" class="{{ utils.is_https ? 'modal-login' }}">{{ Translation('ag_login') ? Translation('ag_login') : 'Login' }}</a> {{ Translation('ag_ou') ? Translation('ag_ou') : 'ou' }} 
+                    <a href="{{ links.register }}" data-tray-tst="cadastro">{{ Translation('ag_cadastre-se') ? Translation('ag_cadastre-se') : 'cadastre-se' }}</a>
+                </span>
+            </div>
+            <div class="col-sm-6 orders">
+                <span class="tray-hide" data-logged-user="true">
+                    <a href="{{ links.logout }}">{{ Translation('ag_logout') ? Translation('ag_logout') : 'Logout' }}</a>
+                </span>
+                <span class="tray-hide" data-logged-user="false">
+                    <a href="{{ links.login }}" class="{{ utils.is_https ? 'modal-login' }}">{{ Translation('ag_login') ? Translation('ag_login') : 'Login' }}</a>
+                </span>
+                <a href="{{ links.orders }}" data-tray-tst="meus_pedidos">{{ Translation('ag_meus-pedidos') ? Translation('ag_meus-pedidos') : 'Meus pedidos' }}</a>
+                <a href="{{ links.central }}" data-tray-tst="meu_cadastro">{{ Translation('ag_minha-conta') ? Translation('ag_minha-conta') : 'Minha conta' }} </a>
+            </div>
+        </div>
+    </div>
+</div>

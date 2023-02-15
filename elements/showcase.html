@@ -1,0 +1,26 @@
+{% if products|length > 0 %}
+    <div class="showcase clearfix" data-tray-tst="vitrine_home">
+        <div class="showcase-name">
+            {% if settings.icon_showcase %}
+                <img src="{{ themePath }}{{ settings.icon_showcase }}" class="icon"></img>
+            {% endif %}            
+            
+            <h2>
+                <strong>{{ showcaseTitle }}</strong>
+            </h2>
+            
+            {% if showcaseSubTitle %}
+                <p>{{ showcaseSubTitle }}</p>
+            {% endif %}        
+        </div>
+        
+        <ul>
+            {% for product in products %}
+                {% set ranking = product.ranking %}
+                <li class="col-sm-3" data-tray-tst="vitrine_produto">
+                    {% element 'snippets/product' {"product": product} %}
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+{% endif %}

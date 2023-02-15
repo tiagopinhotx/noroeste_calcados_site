@@ -1,0 +1,175 @@
+.nav-full{
+    background-color: #9b58b6;
+
+    .horizontal-nav{
+        position: relative;
+        z-index: 20;
+        
+        .level1{
+            height: 70px;
+            position: relative;
+        }
+        
+        .level2{
+            background: #fff;
+            box-shadow: 1px 2px 2px 0 rgba(0, 0, 0, 0.18);
+            display: none;
+            left: 0;
+            min-width: 100%;
+            position: absolute;
+            overflow:auto;
+            height:65vh;
+            
+
+        }
+            .level2::-webkit-scrollbar-thumb {
+            background: black;
+            }
+        
+        .level3{
+            background: #fff;
+            box-shadow: 1px 2px 2px 0 rgba(0, 0, 0, 0.18);
+            display: none;
+            left: 100%;
+            position: absolute;
+            top: 0;
+        }
+        
+        .level4{
+            background: #fff;
+            box-shadow: 1px 2px 2px 0 rgba(0, 0, 0, 0.18);
+            display: none;
+            left: 100%;
+            position: absolute;
+            top: 0;
+        }
+        
+        .item-level1{
+            height: 100%;
+            position: relative;
+            
+            &:hover{
+                background-color: #ff395f;
+                
+                .level2{
+                    display: block;
+                }
+                
+                .link-level1{
+                    color: #000;
+                }
+            }
+            
+            &.sub-left{
+                
+                .level2{
+                    left: auto;
+                    right: 0;
+                }
+                
+                .level3{
+                    box-shadow: -1px 2px 2px 0 rgba(0, 0, 0, 0.18);
+                    left: auto;
+                    right: 100%;
+                }
+                
+                .level4{
+                    left: auto;
+                    position: absolute;
+                    top: 0;
+                    right: 100%;
+                }
+            }
+        }
+        
+        .item-level2{
+            position: relative;
+            
+            &:hover{
+                
+                .level3{
+                    display: block;
+                }
+            }
+        }
+        
+        .item-level3{
+            position: relative;
+            
+            &:hover{
+                
+                .level4{
+                    display: block;
+                }
+                
+                .link-level3{
+                    text-decoration: none;
+                }
+            }
+        }
+        
+        .link-level1{
+            color: #fff;
+            display: block;
+            font-size: 0;
+            height: 100%;
+            overflow: hidden;
+            position: relative;
+            text-align: center;
+            
+            &:hover{
+                text-decoration: none;
+            }
+            
+            span{
+                display: inline-block;
+                max-width: 99%;
+                vertical-align: middle;
+                @include typo(1.4rem, 400, $font);
+                text-transform: uppercase;
+            }
+            
+            &:before{
+                content: '';
+                display: inline-block;
+                height: 70px;
+                vertical-align: middle;
+                width: 1%;
+            }
+        }
+        
+        .link-level2{
+            color: #666;
+            display: block;
+            padding: 10px 30px;
+            white-space: nowrap;
+            @include typo(1.4rem, 400, $font, 3rem);
+            text-transform: uppercase;
+            
+            &:hover{
+                text-decoration: none;
+            }
+        }
+        
+        .link-level3,
+        .link-level4{
+            color: #666;
+            display: block;
+            padding: 10px 30px;
+            white-space: nowrap;
+            @include typo(1.4rem, 400, $font, 3rem);
+            text-transform: uppercase;
+            
+            &:hover{
+                text-decoration: none;
+            }
+        }
+        
+        .all-categories{
+            
+            .link-level1{
+                cursor: default;
+            }
+        }
+    }
+}

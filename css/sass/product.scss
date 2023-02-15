@@ -1,0 +1,249 @@
+.product-1{
+    display: block;
+    padding-bottom: 15px;
+    position: relative;
+    border: 2px solid #fff;
+    margin-top: 20px;
+
+    &:hover{
+        .product-images{
+            .button-buy{
+                top: 0%;
+
+                span{ opacity: 1; }
+            }
+        }
+    }
+
+    a,
+    a:hover
+    a:focus,
+    a:active{
+        position: relative;
+        outline: none;
+        text-decoration: none;
+        z-index: 1;
+    }
+
+    .product-images{
+        position: relative;
+        height: 300px;
+        margin-bottom: 15px;
+        overflow: hidden;
+
+        .product-image{
+            // max-width: 200px;
+            height: 100%;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto;
+
+            img{
+                max-height: 100%;
+            }
+
+        }
+
+        .discount{
+            position: absolute;
+            right: 5px;
+            top: 5px;
+            z-index: 10;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            font-size: 16px;
+            font-weight: 700;
+        }
+
+        .button-buy{
+            position: absolute;
+            top: 100%;
+            left: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(18,65,117,.5);
+            transition: all .2s;
+
+            span{
+                display: block;
+                width: 90%;
+                padding: 15px 0;
+                margin-bottom: 15px;
+                text-align: center;
+                font-size: 1.4rem;
+                text-transform: uppercase;
+                opacity: 0;
+                color: #fff;
+                background: #ff395f;
+                transition: all 1s;
+            }
+        }
+
+    }
+
+    .product-name{
+        color: #2c5275;
+        display: block;
+        height: 55px;
+        margin-bottom: 25px;
+        overflow: hidden;
+        position: relative;
+        z-index: 1;
+        text-transform: uppercase;
+        border-bottom: 1px solid #ebebeb;
+
+        @include typo(1.4rem, 400, $font, 1.8rem);
+
+    }
+
+
+    .product-discount-recursive-tag{
+        background: #3d4445;
+        text-align: center;
+        border-radius: 2px;
+        padding:10px 10px; 
+        border: none;
+        font-weight: 600;
+        color: #fff;
+        margin-bottom: 2px;
+    }
+    .product-discount-recursive-desc{
+        background: #626262;
+        text-align: center;
+        border-radius: 2px;
+        padding:10px 10px; 
+        border: none;
+        font-weight: 600;
+        color: #fff;
+        margin-bottom: 26px;
+    } 
+
+    .product-price{
+        display: block;
+        min-height: 18px;
+        position: relative;
+        z-index: 1;
+        color: #2c5275;
+
+        @include typo(2rem, 400, $font, 2.5rem);
+
+        .price-off{
+            font-weight: 700;
+            color: #ff395f;
+            display: inline-block;
+        }
+
+        .price-various{
+            display: none;
+        }
+
+        .price-before {
+            font-size: 1.2rem;
+            color: #2c5275;
+            font-weight: 400;
+            position: absolute;
+            top: -20px;
+            width: 100%;
+
+            &.strike{ text-decoration: line-through; }
+        }
+    }
+
+    .pricing{
+        text-align: center;
+        padding: 5%;
+        color: #aaa;
+        font-size: 15px;
+    }
+    .product-payment{
+        display: block;
+        margin-bottom: 15px;
+        min-height: 42px;
+        overflow: hidden;
+        position: relative;
+        z-index: 1;
+        color: #aaaeb0;
+
+        @include typo(1.4rem, 400, $font, 1.4rem);
+
+        @media screen and (max-width: $sm){
+            margin-bottom: 7px;
+            font-size: 1rem;
+        }
+
+        > br:first-child{
+            display: none;
+        }
+
+        span,
+        strong{
+            @include typo(1.4rem, 400, $font, 1.4rem);
+
+            @media screen and (max-width: $sm){
+                @include typo(1rem, 400, $font, 1rem);
+            }
+        }
+    }
+
+    .product-buttons{
+        max-height: 50px;
+        position: relative;
+        z-index: 1;
+        padding: 0 15px;
+
+        a{
+            color: #fff;
+            display: none;
+            height: 50px;
+            overflow: hidden;
+            text-transform: initial;
+            background-color: #fff;
+
+            @include typo(1.5rem, 600, $font, 5rem);
+            @include prefix('transition', '600ms all ease 0s');
+
+            @media screen and (max-width: $sm){
+                display: block;
+            }
+
+            span{
+                display: inline-block;
+                vertical-align: top;
+                width: 72%;
+                
+                text-align: center;
+            }
+
+            i{
+                display: inline-block;
+                height: 50px;
+                padding-top: 9px;
+                vertical-align: top;
+                width: 25%;
+                text-align: center;
+                float: left;
+            }
+
+            .ico{
+                width: 23px;
+                height: 33px;
+                fill: #fff;
+            }
+        }
+    }
+
+    .compare-buttons{
+        position: relative;
+        z-index: 10;
+        text-align: center;
+    }
+}

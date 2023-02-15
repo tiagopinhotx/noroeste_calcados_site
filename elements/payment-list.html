@@ -1,0 +1,18 @@
+<div class="payment-list foo-payment row">
+    <h5>{{ Translation('a_vista') }}</h5>
+    <div class="payment-form">
+        {% for payment in paymentMethods.order %}
+            <img src="{{ payment.thumbnail.url }}" alt="{{ payment.display_name }}">
+        {% endfor %}
+    </div>
+
+</div>
+
+<div class="payment-list foo-payment row">
+    <h5>{{ Translation('pagamento_parcelado') }}</h5> 
+    <div class="payment-form">
+        {% for payment in paymentMethods.credit %}
+            <img src="{{ payment.thumbnail.url }}" alt="{{ payment.display_name }}">
+        {% endfor %} 
+    </div>
+</div>  

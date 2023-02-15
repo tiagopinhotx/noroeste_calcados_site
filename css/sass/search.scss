@@ -1,0 +1,36 @@
+.search-1{
+    padding: 40px 0;
+    
+    @media screen and (max-width: $sm){
+        padding: 10px 0;
+    }
+    
+    form{
+        border: 1px solid #ebebeb;
+        border-radius: 5px;
+        height: 45px;
+        background-color: #fff;
+        display: flex;
+        position: relative;
+    }
+    
+    .search-button{
+        background: transparent;
+        border: none;
+        margin: 4px;
+        order: 2;
+    }
+    
+    .search-key{
+        background: none;
+        border: none;
+        height: 45px;
+        font-size: 1.4rem;
+        padding: 12px 25px;
+        width: 100%;
+    }
+    
+    .suggestion{
+        top: 100%;
+    }
+}

@@ -1,0 +1,9 @@
+<div class="search search-1">
+    <form role="form" action="{{ links.search }}" method="get" data-search="suggestion" data-tray-tst="form_busca">
+        <input type="hidden" name="loja" value="{{ store.id }}">
+        <button class="search-button pull-right" type="submit" tabindex="2" data-tray-tst="botao_buscar">
+            <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 425.2 425.199"><path d="M414.792 364.542l-92.37-92.37c-.49-.49-1.067-.834-1.58-1.29 18.175-27.572 28.784-60.576 28.784-96.068C349.624 78.267 271.358 0 174.812 0 78.267 0 0 78.267 0 174.812s78.265 174.813 174.81 174.813c35.495 0 68.497-10.608 96.068-28.784.457.514.8 1.09 1.29 1.58l92.374 92.374c13.875 13.875 36.373 13.875 50.25 0 13.875-13.877 13.875-36.375 0-50.25zm-239.98-75.52c-63.078 0-114.212-51.133-114.212-114.21C60.6 111.734 111.735 60.6 174.812 60.6c63.075 0 114.21 51.136 114.21 114.212 0 63.077-51.135 114.21-114.21 114.21z"/></svg>
+        </button>
+        <input class="search-key" type="text" placeholder="{{ Translation('ag_texto_busca') ? Translation('ag_texto_busca') : 'Digite aqui o que deseja buscar' }}" name="palavra_busca" data-input="suggestion" tabindex="1" data-tray-tst="busca_palavra" required>
+    </form>
+</div>

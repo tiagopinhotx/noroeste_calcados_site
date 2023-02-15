@@ -1,0 +1,53 @@
+.cart{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 125px;
+    
+    @media screen and (max-width: $sm) {
+        height: 65px;
+    }
+    
+    &:active,
+    &:link,
+    &:hover{
+        color: #3d4445;
+        text-decoration: none;
+    }
+    
+    .amount{
+        position: relative;
+        
+        .icon{
+            width: 50px;
+            height: 50px;
+            fill: #9b58b6;
+            
+            @media screen and (max-width: $sm) {
+                width: 35px;
+                height: 35px;
+            }
+        }
+        
+        span{
+            position: absolute;
+            border-radius: 50px;
+            color: #fff;
+            width: 20px;
+            height: 20px;
+            text-align: center;
+            line-height: 20px;
+            right: -5px;
+        }
+    }
+    
+    .title{
+        @include typo(1.4rem, 400, $font, 1.6rem);
+        color: #0a3760;
+        text-align: left;  
+        margin-left: 15px;
+        text-transform: uppercase;
+    }
+
+
+}

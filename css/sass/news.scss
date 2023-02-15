@@ -1,0 +1,83 @@
+.news-full{
+    background-color: #ccc;
+    background-position: center center;
+    position: relative;
+    
+    @media screen and (max-width: $sm){
+        background-position: 60%;
+    }
+    
+    .newsletter{
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: flex-start;
+        margin: 40px 0;
+        height: 250px;
+        position: relative;
+    }
+    
+    .title{
+        color:  #9b58b6;
+        text-transform: initial;
+        @include typo(3.6rem, 600, $font, 3rem);
+    }
+    
+    span{
+        color:  #ffffff;
+        text-align: center;  
+        padding: 15px 0;
+        @include typo(1.6rem, 400, $font, 2.1rem);
+        
+        @media screen and (max-width: $sm) {
+            text-align: left;
+        }
+    }
+    
+    form{
+        display: flex;
+        flex-flow: column;
+        justify-content: space-between;
+        align-items: flex-start;
+        width: 60%; 
+        
+        @media screen and (max-width: $sm) {
+            width: 90%;
+        }        
+        
+        input{
+            width: 80%;
+            height: 45px;
+            padding-left: 10px;
+            text-transform: uppercase;
+            border-color: transparent;
+            @include typo(1.8rem, 400, $font, 1.6rem);
+        }     
+        
+        .news-btn{
+            border: none;
+            background-color: #252525;
+            color: #fff;
+            width: 20%;
+            height: 45px;
+            margin-top: 10px;
+            text-transform: uppercase;
+            box-shadow: 0px 3px 2px 0px rgba(0, 0, 0, 0.24);
+            transition: all 0.1s;
+            @include typo(1.5rem, 400, $font, 1.6rem);
+            
+            @media screen and (max-width: $sm) {
+                width: 50%;
+            }   
+            
+            &:hover{
+                transform: translateY(1px);
+                box-shadow: none;                
+            }
+        }        
+    }
+    
+
+    
+
+}
